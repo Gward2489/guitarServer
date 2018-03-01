@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Formatters.Json;
-using guitarServer.Interfaces;
+using guitarServer.Services;
 
 namespace guitarServer.Controllers
 {
@@ -17,18 +17,23 @@ namespace guitarServer.Controllers
 
     public class GuitarsController : Controller
     {
-        private readonly IApplicationConfiguration _appSettings;
+        
+        private readonly ApplicationConfiguration _appSettings;
 
-        public GuitarsController(IApplicationConfiguration appSettings)
-        {
+        public GuitarsController(ApplicationConfiguration appSettings)
+        {   
             _appSettings = appSettings;
         }
 
         [HttpGet("{searchParams}")]
         public async Task<IActionResult> GetAsync(string searchParams)
         {
-        string searchString = _appSettings.EbayKey;
             
+        string searchString = _appSettings.EbayKey;
+        Console.WriteLine(_appSettings);
+        Console.WriteLine(_appSettings.EbayKey);
+
+        searchString += searchParams;            
         string results = await GetEbay.GetGuitarsAsync(searchString);
         Console.WriteLine(results);
         return Ok (results);

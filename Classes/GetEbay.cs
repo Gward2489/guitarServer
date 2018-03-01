@@ -16,6 +16,7 @@ namespace guitarServer.Classes
             // empty string to hold json string
             string Json = "";
             // create a new client
+            Console.WriteLine(path);
             using (HttpClient client = new HttpClient())
             // get response from client with desire path 
             using (HttpResponseMessage res = await client.GetAsync(path))
