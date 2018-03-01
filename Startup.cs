@@ -25,6 +25,7 @@ namespace guitarServer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+                services.AddMvc();
             
             services.AddSingleton<IApplicationConfiguration, ApplicationConfiguration>(
                 e => Configuration.GetSection("ApplicationConfiguration")
@@ -33,7 +34,6 @@ namespace guitarServer
             services.Configure<ApplicationConfiguration>(Configuration.GetSection("ApplicationConfiguration"));
             services.AddScoped<ApplicationConfiguration>();
 
-                services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

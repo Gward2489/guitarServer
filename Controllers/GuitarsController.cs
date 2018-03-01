@@ -39,7 +39,6 @@ namespace guitarServer.Controllers
         return Ok (results);
         }
 
-
-        
+   
     }
 }
