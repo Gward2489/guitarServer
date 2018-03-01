@@ -14,7 +14,7 @@ namespace guitarServer.Classes
         public static async Task<string> GetGuitarsAsync(string path)
         {
             // empty string to hold json string
-            string JsonObj = "";
+            string Json = "";
             // create a new client
             using (HttpClient client = new HttpClient())
             // get response from client with desire path 
@@ -31,17 +31,17 @@ namespace guitarServer.Classes
                 // turn it into a xmlNode
                 XmlNode newNode = doc.DocumentElement;
                 // turn it into a JSON string
-                JsonObj = JsonConvert.SerializeXmlNode(newNode);
+                Json = JsonConvert.SerializeXmlNode(newNode);
 
                 //if we got something write it to the console
-                if (data != null)
+                if (data == null)
                 {
-                Console.WriteLine(JsonObj);
+                Console.WriteLine(Json);
                 }
                 
             }
             //return Json object
-            return JsonObj;
+            return Json;
         }
     }
 }

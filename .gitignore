@@ -4,3 +4,4 @@ obj
 *.sqlite3
 .vscode
 .DS_Store
+.json
