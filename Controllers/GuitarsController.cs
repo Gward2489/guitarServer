@@ -7,6 +7,7 @@ using guitarServer.Classes;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Formatters.Json;
 using guitarServer.Services;
@@ -18,9 +19,9 @@ namespace guitarServer.Controllers
     public class GuitarsController : Controller
     {
         
-        private readonly ApplicationConfiguration _appSettings;
+        private readonly IApplicationConfiguration _appSettings;
 
-        public GuitarsController(ApplicationConfiguration appSettings)
+        public GuitarsController(IApplicationConfiguration appSettings)
         {   
             _appSettings = appSettings;
         }
