@@ -1,0 +1,10 @@
+/home/gward2489/workspace/guitarServer/bin/Debug/netcoreapp2.0/guitarServer.deps.json
+/home/gward2489/workspace/guitarServer/bin/Debug/netcoreapp2.0/guitarServer.runtimeconfig.json
+/home/gward2489/workspace/guitarServer/bin/Debug/netcoreapp2.0/guitarServer.runtimeconfig.dev.json
+/home/gward2489/workspace/guitarServer/bin/Debug/netcoreapp2.0/guitarServer.dll
+/home/gward2489/workspace/guitarServer/bin/Debug/netcoreapp2.0/guitarServer.pdb
+/home/gward2489/workspace/guitarServer/obj/Debug/netcoreapp2.0/guitarServer.csproj.CoreCompileInputs.cache
+/home/gward2489/workspace/guitarServer/obj/Debug/netcoreapp2.0/guitarServer.AssemblyInfoInputs.cache
+/home/gward2489/workspace/guitarServer/obj/Debug/netcoreapp2.0/guitarServer.AssemblyInfo.cs
+/home/gward2489/workspace/guitarServer/obj/Debug/netcoreapp2.0/guitarServer.dll
+/home/gward2489/workspace/guitarServer/obj/Debug/netcoreapp2.0/guitarServer.pdb
