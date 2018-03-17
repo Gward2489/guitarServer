@@ -27,6 +27,13 @@ namespace guitarServer.Controllers
         return Ok (results);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetResultsAsync(string urlFirstHalf, string urlSecondHalf)
+        {
+            string results = await GetEbay.GetGuitarsAsync("");
+            return Ok (results);
+        }
+
 
         
     }

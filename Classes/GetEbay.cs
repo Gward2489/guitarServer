@@ -11,7 +11,7 @@ namespace guitarServer.Classes
 {
     public class GetEbay
     {
-        public static async Task<string> GetGuitarsAsync(string path)
+        public static async Task<string> GetGuitarsAsync(string urlFirstHalf, string urlSecondHalf)
         {
             // empty string to hold json string
             string JsonObj = "";
