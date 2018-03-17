@@ -30,7 +30,7 @@ namespace guitarServer
                 e => Configuration.GetSection("ApplicationConfiguration")
                     .Get<ApplicationConfiguration>());
            
-
+            services.AddCors();
             services.AddMvc();
         }
 
@@ -41,6 +41,13 @@ namespace guitarServer
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder =>
+                builder.WithOrigins("https://www.guitarpricer.site","https://guitarpricer.site","http://localhost:5000","http://localhost:8080")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()   
+            );
 
             app.UseMvc();
         }

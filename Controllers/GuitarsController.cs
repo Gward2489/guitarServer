@@ -14,6 +14,7 @@ using guitarServer.Services;
 
 namespace guitarServer.Controllers
 {
+    [EnableCors("AllowSpecificOrigin")]
     [Route("api/[controller]")]
 
     public class GuitarsController : Controller
