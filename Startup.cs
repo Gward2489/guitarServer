@@ -50,7 +50,7 @@ namespace guitarServer
             }
 
             app.UseCors(builder =>
-                builder.WithOrigins("https://www.guitarpricer.site","https://guitarpricer.site","http://localhost:5000","http://localhost:8080")
+                builder.WithOrigins("https://www.guitarpricer.site","https://guitarpricer.site","http://localhost:5000","http://localhost:8080","http:127.0.0.1:5000")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()   
