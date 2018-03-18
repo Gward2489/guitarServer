@@ -30,7 +30,14 @@ namespace guitarServer
                 e => Configuration.GetSection("ApplicationConfiguration")
                     .Get<ApplicationConfiguration>());
            
-            services.AddCors();
+            services.AddCors(options =>{
+                options.AddPolicy("CorsPolicy",
+                builder => builder.WithOrigins("https://www.guitarpricer.site","https://guitarpricer.site","http://localhost:5000","http://localhost:8080","http://127.0.0.1:8080")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+                });
+                
             services.AddMvc();
         }
 
